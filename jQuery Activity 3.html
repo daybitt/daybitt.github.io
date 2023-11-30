@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="form" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="course">Course</label>
+                <input type="text" class="form-control" id="course" name="course">
+            </div>
+            <div class="form-group">
+                <label for="section">Section</label>
+                <input type="text" class="form-control" id="section" name="section">
+            </div>
+            <button type="submit" class="btn btn-primary">Save Record</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h1>Records</h1>
+        <table class="table" id="recordsTable">
+            <thead>
+                <tr>
+                    <th scope="col">NAME</th>
+                    <th scope="col">COURSE</th>
+                    <th scope="col">SECTION</th>
+                    <th scope="col">ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#form').on('submit', function(e){
+                e.preventDefault();
+                var name = $('#name').val();
+                var course = $('#course').val();
+                var section = $('#section').val();
+                $('#recordsTable tbody').append('<tr><td>'+name+'</td><td>'+course+'</td><td>'+section+'</td><td><button class="btn btn-danger delete">DELETE</button></td></tr>');
+                $('#form')[0].reset();
+            });
+
+            $(document).on('click', '.delete', function(){
+                $(this).closest('tr').remove();
+            });
+        });
+    </script>
+</body>
+</html>
