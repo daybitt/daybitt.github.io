@@ -1,7 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moe The Programmer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .progress {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="container">
+        <h1 class="text-center">Moe The Programmer</h1>
+        <p class="text-center">Geek Web Developer &bull; Weeb</p>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-primary" onclick="startExam()">Start Midterm Exam</button>
+        </div>
+
+        <h2 class="mt-5">Portfolio</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Bootstrap + Jquery - Progress Bars</h3>
+                <p>Progress Bars with buttons and event handlers</p>
+                <button class="btn btn-primary" onclick="loadProgressBars()">Visit Project</button>
+            </div>
+            <div class="col-md-6">
+                <h3>Bootstrap + Jquery - Registration Form</h3>
+                <p>Form</p>
+                <button class="btn btn-primary" onclick="loadRegistrationForm()">Visit Project</button>
+            </div>
+        </div>
+
+        <h2 class="mt-5">Socials Media Accounts</h2>
+        <p>ofy</p>
+    </div>
+
+    <script>
+        function startExam() {
+            alert("You've started the midterm exam.");
+        }
+
+        function loadProgressBars() {
+            alert("You've clicked on the Visit Project button for the Bootstrap + Jquery - Progress Bars project.");
+        }
+
+        function loadRegistrationForm() {
+            alert("You've clicked on the Visit Project button for the Bootstrap + Jquery - Registration Form project.");
+        }
+    </script>
 </body>
 </html>
